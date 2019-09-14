@@ -1,0 +1,340 @@
+.abaNa {
+    background: #ADD8E6;
+    top: -10px;
+    margin-left: -15px;
+    width: 3500px;
+    height: 150px;
+    position: relative;
+}
+
+body {
+    background: #f8ece0;
+    color: #828282;
+    font-family: tahoma;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+}
+
+#menu-frente {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    padding: 7px;
+    border-radius: 100px 100px 100px 100px;
+    background: #A8B9CC;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .3), 1px 1px 1px rgba(255, 255, 255, .3);
+    overflow: hidden;
+    margin-left: 450px;
+}
+
+#menu-frente img {
+    position: fixed;
+    display: inline-block;
+    border-radius: 100px 100px 100px 100px;
+    width: 90px;
+    height: 90px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+#menu-frente .menu-hover {
+    position: fixed;
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 100px 100px 100px 100px;
+    width: 90px;
+    height: 0px;
+    background: rgba(0, 0, 0, .5);
+    text-align: center;
+    font-family: calibri;
+    text-shadow: -1px -1px rgba(0, 0, 0, .5);
+    font-size: 15px;
+    letter-spacing: .5px;
+    font-weight: bold;
+    font-style: italic;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.menu-hover a {
+    color: #fff;
+}
+
+#menu-frente:hover .menu-hover {
+    height: 90px;
+    transition: .3s;
+}
+
+.menu-hover .menu-nome {
+    display: block;
+    margin-top: -20px;
+    margin-left: 0px;
+    width: 90px;
+    text-align: center;
+    font-family: 'Calibri';
+    text-shadow: -1px -1px rgba(0, 0, 0, .5);
+    font-size: 15px;
+    letter-spacing: .5px;
+    font-weight: bold;
+    font-style: italic;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.menu-nome a {
+    color: #fff;
+}
+
+#menu-frente:hover .menu-nome {
+    margin-top: 25px;
+    transition: 1s;
+}
+
+
+/* menu dois */
+
+#menu-frente2 {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    padding: 7px;
+    border-radius: 100px 100px 100px 100px;
+    background: #A8B9CC;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .3), 1px 1px 1px rgba(255, 255, 255, .3);
+    overflow: hidden;
+    margin-top: 30px;
+    margin-left: 250px;
+}
+
+#menu-frente2 img {
+    position: fixed;
+    display: inline-block;
+    border-radius: 100px 100px 100px 100px;
+    width: 90px;
+    height: 90px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+#menu-frente2 .menu-hover2 {
+    position: fixed;
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 100px 100px 100px 100px;
+    width: 90px;
+    height: 0px;
+    background: rgba(0, 0, 0, .5);
+    text-align: center;
+    font-family: calibri;
+    text-shadow: -1px -1px rgba(0, 0, 0, .5);
+    font-size: 15px;
+    letter-spacing: .5px;
+    font-weight: bold;
+    font-style: italic;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.menu-hover2 a {
+    color: #fff;
+}
+
+#menu-frente2:hover .menu-hover2 {
+    height: 90px;
+    transition: .3s;
+}
+
+.menu-hover2 .menu-nome2 {
+    display: block;
+    margin-top: -20px;
+    margin-left: 0px;
+    width: 90px;
+    text-align: center;
+    font-family: 'Calibri';
+    text-shadow: -1px -1px rgba(0, 0, 0, .5);
+    font-size: 15px;
+    letter-spacing: .5px;
+    font-weight: bold;
+    font-style: italic;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.menu-nome2 a {
+    color: #fff;
+}
+
+#menu-frente2:hover .menu-nome2 {
+    margin-top: 25px;
+    transition: 1s;
+}
+
+
+/*-- parte tres --*/
+
+#menu-frente3 {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    padding: 7px;
+    border-radius: 100px 100px 100px 100px;
+    background: #A8B9CC;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .3), 1px 1px 1px rgba(255, 255, 255, .3);
+    overflow: hidden;
+    margin-top: 30px;
+    margin-left: 250px;
+}
+
+#menu-frente3 img {
+    position: fixed;
+    display: inline-block;
+    border-radius: 100px 100px 100px 100px;
+    width: 90px;
+    height: 90px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+#menu-frente3 .menu-hover3 {
+    position: fixed;
+    margin-top: 30px;
+    margin-left: 45px;
+    border-radius: 100px 100px 100px 100px;
+    width: 0px;
+    height: 0px;
+    background: rgba(0, 0, 0, .5);
+    text-align: center;
+    font-family: calibri;
+    text-shadow: -1px -1px rgba(0, 0, 0, .5);
+    font-size: 15px;
+    letter-spacing: .5px;
+    font-weight: bold;
+    font-style: italic;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.menu-hover3 a {
+    color: #fff;
+}
+
+#menu-frente3:hover .menu-hover3 {
+    width: 90px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 0px;
+    transition: .3s;
+}
+
+.menu-hover3 .menu-nome3 {
+    display: block;
+    margin-top: -20px;
+    margin-left: 0px;
+    width: 90px;
+    text-align: center;
+    font-family: 'Calibri';
+    text-shadow: -1px -1px rgba(0, 0, 0, .5);
+    font-size: 15px;
+    letter-spacing: .5px;
+    font-weight: bold;
+    font-style: italic;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.menu-nome3 a {
+    color: #fff;
+}
+
+#menu-frente3:hover .menu-nome3 {
+    margin-top: 25px;
+    transition: 1s;
+}
+
+
+/* --- links  - */
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ccc;
+}
+
+
+/* --- meio  - */
+
+#content {
+    width: 820px;
+    background: #cccccc;
+    margin: auto;
+}
+
+
+/* --- topo  - */
+
+#header {
+    background: #ccc;
+    background-repeat: no-repeat;
+    width: 820px;
+    height: 208px;
+    margin-left: auto 0px;
+}
+
+
+/* --- final  - */
+
+#footer {
+    background: url('http://static.tumblr.com/2jiprob/4l6md2h3m/footer.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 820px;
+    height: 157px;
+    clear: both;
+}
+
+
+/* --- sidebar  - */
+
+#sidebar {
+    background: #e9d6c4;
+    opacity: 0.4;
+    /* --- retire  - */
+    width: 290px;
+    float: left;
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+/* --- postagens  - */
+
+#main {
+    background: #e9d6c4;
+    opacity: 0.4;
+    /* --- retire  - */
+    width: 500px;
+    float: right;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#home {
+    position: fixed;
+    font-size: 120px;
+    height: 150px;
+    width: auto;
+    font-family: 'Oswald', sans-serif;
+    margin-top: -150px;
+    margin-left: 30px;
+}
+
+#home a {
+    color: white;
+    text-shadow: 1px 3px 10px #424242;
+}

@@ -1,0 +1,77 @@
+#caixa {
+    width: 300px;
+    height: 150px;
+    background: #ccc;
+    position: fixed;
+    margin-left: 600px;
+    top: 150px;
+    box-shadow: inset -2px -2px 6px -2px #696969;
+    border: solid 2px #696969;
+}
+
+.login {
+    display: inline-block;
+    width: 160px;
+    background: #f6f6f6;
+    padding: 5px;
+    height: 20px;
+    font-size: 10px;
+    border-radius: 5px;
+    font-family: 'Calibri';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 70px;
+    margin-top: 30px;
+}
+
+.login input {
+    text-transform: uppercase;
+    color: black;
+    padding: 2px;
+}
+
+
+/*Resposta*/
+
+.usuario {
+    display: inline-block;
+    width: 160px;
+    background: #f6f6f6;
+    padding: 5px;
+    font-size: 10px;
+    border-radius: 5px;
+    font-family: 'Calibri';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+.usuario input {
+    text-transform: uppercase;
+    color: black;
+}
+
+.entrada {
+    display: inline-block;
+    width: 70px;
+    background: #f6f6f6;
+    padding: 3px;
+    font-size: 10px;
+    border-radius: 5px;
+    font-family: 'Calibri';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 120px;
+    margin-top: 10px;
+    box-shadow: inset -2px -2px 6px -2px #696969;
+}
+
+.entrada button {
+    text-transform: uppercase;
+    width: 70px;
+    height: 20px;
+    font-size: 11px;
+    color: black;
+    box-shadow: inset -2px -2px 6px -2px #696969;
+}
