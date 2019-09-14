@@ -14,4 +14,4 @@ class Information:
         }
 
     def insert_string(self):
-        return f'INSERT INTO INFORMACOES VALUES ("{self.title}", "{self.text_path}", "{self.images_path}");'
+        return f'INSERT INTO INFORMATION VALUES ("{self.title}", "{self.text_path}", "{self.images_path}");'

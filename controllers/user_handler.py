@@ -3,25 +3,25 @@ from model.user import User
 
 class UserManager:
     def __init__(self):
-        self.session_user = {}
+        self.user = {}
 
-    def add_user(self, session_id, username, password):
-        if session_id in self.session_user:
+    def add_user(self, username, password):
+        if username in self.user:
             return False
 
-        self.session_user[session_id] = User(username, password)
+        self.user[username] = User(username, password)
         return True
 
-    def remove_user(self, session_id):
-        if session_id not in self.session_user:
+    def remove_user(self, username):
+        if username not in self.user:
             return False
 
-        del self.session_user[session_id]
+        del self.user[username]
         return True
 
-    def get_user(self, session_id):
-        return self.session_user[session_id].json()
+    def check_user(self, username):
+        return username in self.user
 
-    def check_user(self, session_id):
-        return session_id in self.session_user
+    def get_user(self, username):
+        return self.user[username]
 

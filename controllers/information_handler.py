@@ -23,4 +23,4 @@ class InformationManager:
         return information_name in self.informations
 
     def get_information(self, information_name):
-        return self.informations[information_name].json()
+        return self.informations[information_name]

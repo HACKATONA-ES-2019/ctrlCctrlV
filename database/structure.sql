@@ -12,22 +12,22 @@ CREATE TABLE QUIZ(
 CREATE TABLE USER_QUIZ(
 	username VARCHAR(50) NOT NULL,
 	quiz_title VARCHAR(250) NOT NULL,
+	PRIMARY KEY(username, quiz_title),
 	FOREIGN KEY (username) REFERENCES APP_USER(username),
-	FOREIGN KEY (quiz_title) REFERENCES QUIZ(quiz_title),
-	CONSTRAINT pk_user_quiz PRIMARY KEY(username, quiz_title)
+	FOREIGN KEY (quiz_title) REFERENCES QUIZ(quiz_title)
 );
 
 CREATE TABLE QUESTION(
     question_id VARCHAR (500) PRIMARY KEY,
-	correct_answer_id NUMERIC(2) NOT NULL,
+	correct_answer_id INTEGER(2) NOT NULL,
 	quiz_title VARCHAR(250) NOT NULL,
 	FOREIGN KEY (quiz_title) REFERENCES QUIZ(quiz_title)
 );
 
 CREATE TABLE ANSWER(
-	answer_id NUMERIC(2) PRIMARY KEY,
+	answer_id INTEGER(2) PRIMARY KEY,
 	answer_text VARCHAR(200) NOT NULL,
-	question_id VARCHAR (500) NOT NULL
+	question_id VARCHAR (500) NOT NULL,
 	FOREIGN KEY (question_id) REFERENCES QUESTION(question_id)
 );
 
