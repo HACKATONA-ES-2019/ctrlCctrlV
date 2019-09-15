@@ -86,6 +86,8 @@
     border-radius: 100px 100px 100px 100px;
     transition: 1s;
 }
+
+
 /*  */
 
 #menu-frente2 {
@@ -172,6 +174,7 @@
 
 
 /*  */
+
 #menu-frente3 {
     display: inline-block;
     width: 90px;
@@ -269,6 +272,7 @@ a:hover {
     color: #ccc;
 }
 
+
 /* --- topo  - */
 
 #header {
@@ -312,4 +316,86 @@ a:hover {
 #home a {
     color: white;
     text-shadow: 1px 3px 10px #424242;
+}
+
+
+/*nao mexer no codigo acima */
+
+#downcute {
+    width: 200px;
+    height: auto;
+    border: solid 1px #A8B9CC;
+    margin-left: 200px;
+    margin-top: 100px;
+    line-height: 90px;
+    position: fixed;
+    padding: 20px;
+}
+
+#downcute button {
+    opacity: 1;
+    -webkit-transition-duration: .80s;
+    -moz-transition-duration: .80s;
+    -o-transition-duration: .80s;
+    -ms-transition-duration: .80s;
+    float: left;
+    display: inline-block;
+    font: 20px PF Arma Five;
+    width: 200px;
+    padding: 5px;
+    height: 50px;
+    color: #ccc;
+    text-transform: none;
+    font-style: normal;
+    background-color: #4682B4;
+    margin-left: -5px;
+}
+
+#downcute button:hover {
+    color: black;
+    background: #A8B9CC;
+    -webkit-transition-duration: .80s;
+    -moz-transition-duration: .80s;
+    -o-transition-duration: .80s;
+    -ms-transition-duration: .80s;
+}
+
+#downcute button ul {
+    background-color: #A8B9CC;
+    color: black;
+    width: 300px;
+    height: 30px;
+    position: fixed;
+    margin-top: -28px;
+    font-family: PF Arma Five;
+    font-size: 15px;
+    overflow: hidden;
+    text-align: left;
+    -webkit-transition-duration: .80s;
+    -moz-transition-duration: .80s;
+    -o-transition-duration: .80s;
+    -ms-transition-duration: .80s;
+    text-indent: -38px;
+    opacity: 0;
+}
+
+#downcute button:hover ul {
+    margin-left: 200px;
+    color: black;
+    -webkit-transition-duration: .80s;
+    -moz-transition-duration: .80s;
+    -o-transition-duration: .80s;
+    -ms-transition-duration: .80s;
+    opacity: 1;
+}
+
+#frase {
+    position: fixed;
+    font-size: 40px;
+    font-family: 'Pacifico', cursive;
+    width: auto;
+    height: 15px;
+    margin-left: 200px;
+    margin-top: 35px;
+    color: #4682B4;
 }
