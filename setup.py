@@ -7,7 +7,7 @@ app = Flask(__name__)
 handler = Handler()
 
 # a = handler.get_quizzes()
-aux = handler.get_quiz('Quiz incendio')
+# aux = handler.get_quiz('Quiz incendio')
 
 # handler.add_user('admin', 'admin')
 # handler.add_information('Incendio', 'resources/incendio', 'resources/incendio')
