@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ quiz_title }}</title>
+</head>
+<body>
+
+{% for question in questions %}
+    {{ question }}
+    <div>
+    {% for answer, correct in questions[question] %}
+        <button id="{{ answer }}" correct="{{ correct }}">{{ answer }}</button>
+
+    {% endfor %}
+
+    </div>
+{% endfor %}
+</body>
+</html>

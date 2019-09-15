@@ -1,6 +1,7 @@
 from controllers.user_handler import UserManager
 from controllers.information_handler import InformationManager
 from controllers.db_handler import DBHandler
+from controllers.quiz_manager import QuizManager
 
 
 class Handler:
@@ -8,6 +9,7 @@ class Handler:
         self.user_manager = UserManager()
         self.information_manager = InformationManager()
         self.db_handler = DBHandler()
+        self.quiz_manager = QuizManager()
 
     def add_user(self, username, password):
         if self.user_manager.add_user(username, password):
@@ -59,3 +61,40 @@ class Handler:
             tutoriais_names.append(info[0])
 
         return tutoriais_names
+
+    def add_quiz(self, quiz_title):
+        self.quiz_manager.add_quiz(quiz_title)
+
+    def add_question(self, quiz_title, question_title, answers):
+        self.quiz_manager.add_question(quiz_title, question_title, answers)
+
+        insert_quiz_query = f'INSERT INTO QUIZ VALUES ("{quiz_title}");'
+        insert_question_query = f'INSERT INTO QUESTION VALUES ("{question_title}", "{quiz_title}");'
+        insert_answers_query = []
+        for ans in answers:
+            insert_answers_query.append(f'INSERT INTO ANSWER VALUES ("{ans.text}", {1 if ans.right else 0}, "{question_title}");')
+
+        self.db_handler.insert(insert_quiz_query)
+        self.db_handler.insert(insert_question_query)
+        for answer_query in insert_answers_query:
+            self.db_handler.insert(answer_query)
+
+    def get_quizzes(self):
+        quizzes = self.db_handler.get_quizzes()
+        quizzes_names = set()
+        for quiz in set(quizzes):
+            quizzes_names.add(quiz[0])
+
+        return quizzes_names
+
+    def get_quiz(self, quiz_title):
+        question_quiz, questions_obj = self.db_handler.get_quiz(quiz_title)
+
+        page_object = {}
+        for question, quiz in question_quiz:
+            if quiz not in page_object:
+                page_object[quiz] = {}
+
+            page_object[quiz][question] = [(answer, correct) for answer, correct, _ in questions_obj[question]]
+
+        return page_object
