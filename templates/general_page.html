@@ -2,47 +2,51 @@
 <html lang="en">
 
 <link>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/general.css') }}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/general.css') }}">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <title>{{ tutorial_name }}</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<title>{{ tutorial_name }}</title>
 </head>
 
 <body>
 
-    <div class=abaNa>
-        <div id="menu-frente">
-            <img src="http://api.tumblr.com/v2/blog/URL.tumblr.com/avatar/96/">
 
-            <div class="menu-hover">
-                <div class="menu-nome"><a href="http://127.0.0.1:5000/tutoriais">Tutoriais</a></div>
-            </div>
-        </div>
-        <div id="menu-frente2">
-            <img src="http://api.tumblr.com/v2/blog/URL.tumblr.com/avatar/96/">
+<div class=abaNa>
+    <div id="menu-frente">
+        <img src="{{ url_for('static', filename='images/tutorialicone.jpg') }}">
 
-            <div class="menu-hover2">
-                <div class="menu-nome2"><a href="http://127.0.0.1:5000/quiz">Quiz</a></div>
-            </div>
-        </div>
-        <div id="menu-frente3">
-            <img src="http://api.tumblr.com/v2/blog/URL.tumblr.com/avatar/96/">
-
-            <div class="menu-hover3">
-                <div class="menu-nome3"><a href="http://127.0.0.1:5000/contato">Contato</a></div>
-            </div>
-        </div>
-
-        <div id="home">
-            <a href="">HOME</a>
+        <div class="menu-hover">
+            <div class="menu-nome"><a href="http://127.0.0.1:5000/tutoriais">Tutoriais</a></div>
         </div>
     </div>
-    <textarea>{{ tutorial_text }}</textarea>
+    <div id="menu-frente2">
+        <img src="{{ url_for('static', filename='images/quizicone.png') }}">
+
+        <div class="menu-hover2">
+            <div class="menu-nome2"><a href="http://127.0.0.1:5000/quiz">Quiz</a></div>
+        </div>
+    </div>
+    <div id="menu-frente3">
+        <img src="{{ url_for('static', filename='images/contatoicone.png') }}">
+
+        <div class="menu-hover3">
+            <div class="menu-nome3"><a href="http://127.0.0.1:5000/contato">Contato</a></div>
+        </div>
+    </div>
+
+    <div id="home">
+        <a>HOME</a>
+    </div>
+</div>
+<div id="mensagem">{{ tutorial_text }}</div>
+
+<div class="cadastro">
     <button onclick="window.location.replace('http://127.0.0.1:5000/home')">Voltar</button>
+</div>
 </body>
 
 </html>

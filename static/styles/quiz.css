@@ -1,71 +1,46 @@
-#downcute {
-    width: 200px;
-    height: auto;
-    border: solid 1px #A8B9CC;
-    margin-left: 200px;
-    margin-top: 100px;
-    line-height: 90px;
-    position: fixed;
-    padding: 20px;
+* {
+  box-sizing: border-box;
 }
 
-#downcute button {
-    opacity: 1;
-    -webkit-transition-duration: .80s;
-    -moz-transition-duration: .80s;
-    -o-transition-duration: .80s;
-    -ms-transition-duration: .80s;
-    float: left;
-    display: inline-block;
-    font: 20px PF Arma Five;
-    width: 200px;
-    padding: 5px;
-    height: 30px;
-    color: #ccc;
-    text-transform: none;
-    font-style: normal;
-    background-color: #4682B4;
-    margin-left: -5px;
-    margin-top: 20px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-#downcute button:hover {
-    color: black;
-    background: #A8B9CC;
-    -webkit-transition-duration: .80s;
-    -moz-transition-duration: .80s;
-    -o-transition-duration: .80s;
-    -ms-transition-duration: .80s;
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
 }
 
-#downcute button ul {
-    background-color: #A8B9CC;
-    color: black;
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.space{
     width: 300px;
-    height: 30px;
-    position: fixed;
-    margin-top: -28px;
-    font-family: PF Arma Five;
-    font-size: 15px;
-    overflow: hidden;
-    text-align: left;
-    -webkit-transition-duration: .80s;
-    -moz-transition-duration: .80s;
-    -o-transition-duration: .80s;
-    -ms-transition-duration: .80s;
-    text-indent: -38px;
-    opacity: 0;
-}
-
-#pergunta {
-    width: auto;
-    height: auto;
-    margin-left: 0px;
-    margin-top: 0px;
-    line-height: 20px;
-}
-
-#pergunta a {
-    font-family: 'Abel', sans-serif;
-    font-size: 15px;
+    margin: 5px;
 }

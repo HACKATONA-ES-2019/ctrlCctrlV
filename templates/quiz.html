@@ -3,33 +3,32 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../static/styles/quiz.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/quiz.css') }}">
+
+    <script src="{{ url_for('static', filename='scripts/quiz.js') }}"></script>
     <meta charset="UTF-8">
     <title>{{ quiz_title }}</title>
 </head>
 
 <body>
 
-    <div id="downcute">
-        <div id="pergunta">
-            <li>Campo da pergunta aqui, escreva a pergunta</li>
+<div class="column">
+    {% for question in questions %}
+        <div class="row">
+            <div class="card">
+                <div class="question">
+                    <h3>{{ question }}</h3>
+                </div>
+                {% for answer, correct in questions[question] %}=
+                    <button id="{{ answer }}" data-correct="{{ correct }}" class="space" onclick="change_color(this)">{{ answer }}</button>
+                {% endfor %}
+
+            </div>
         </div>
-        <a>
-            <center><button>Resposta 1</button></center>
-        </a>
-    </div>
-
-
-    {% for question in questions %} {{ question }}
-    <div>
-        {% for answer, correct in questions[question] %}
-        <div>
-            <center><a id="{{ answer }}" correct="{{ correct }}">{{ answer }}</a></center>
-        </div>
-        {% endfor %}
-
-    </div>
+        <p style="padding: 20px;"></p>
     {% endfor %}
+</div>
+
 </body>
 
 </html>

@@ -14,22 +14,21 @@
 
     <div class=abaNa>
         <div id="menu-frente">
-            <img src="http://api.tumblr.com/v2/blog/URL.tumblr.com/avatar/96/">
+            <img src="{{ url_for('static', filename='images/tutorialicone.jpg') }}">
 
             <div class="menu-hover">
                 <div class="menu-nome"><a href="http://127.0.0.1:5000/tutoriais">Tutoriais</a></div>
             </div>
         </div>
         <div id="menu-frente2">
-            <img src="http://api.tumblr.com/v2/blog/URL.tumblr.com/avatar/96/">
+            <img src="{{ url_for('static', filename='images/quizicone.png') }}">
 
             <div class="menu-hover2">
-                <div class="menu-nome2"><a href="http://127.0.0.1:5000/quiz">Quiz</a>
-                </div>
+                <div class="menu-nome2"><a href="http://127.0.0.1:5000/quiz">Quiz</a></div>
             </div>
         </div>
         <div id="menu-frente3">
-            <img src="http://api.tumblr.com/v2/blog/URL.tumblr.com/avatar/96/">
+            <img src="{{ url_for('static', filename='images/contatoicone.png') }}">
 
             <div class="menu-hover3">
                 <div class="menu-nome3"><a href="http://127.0.0.1:5000/contato">Contato</a></div>
@@ -40,43 +39,23 @@
             <a>HOME</a>
         </div>
     </div>
-    <div id="frase">
-        <center>Tutorial</center>
-    </div>
+<div id="frase">
+    <center>Tutorial</center>
+</div>
 
-    <div id="downcute">
-        <a href="">
-            <center>INCÊNDIO</center>
-            <ul>
-                <center>VOCÊ SABERIA O QUE FAZER?</center>
-            </ul>
-        </a>
-        <a href="">
-            <center>ENCHENTE</center>
-            <ul>
-                <center>VOCÊ SABERIA O QUE FAZER?</center>
-            </ul>
-        </a>
-        <a href="">
-            <center>DESLIZAMENTOS</center>
-            <ul>
-                <center>VOCÊ SABERIA O QUE FAZER?</center>
-            </ul>
-        </a>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-
-    </div>
-
-
+<div id="downcute">
     {% for tutorial_name in tutoriais %}
-    <button id="{{ tutorial_name }}" onclick="window.location.replace('http://127.0.0.1:5000/tutorial/' + this.id);">{{ tutorial_name }}</button> {% endfor %}
-
+        <a id="{{ tutorial_name }}" onclick="window.location.replace('http://127.0.0.1:5000/tutorial/' + this.id);">
+            <center>{{ tutorial_name }}</center>
+            <ul>
+                <center>VOCÊ SABERIA O QUE FAZER?</center>
+            </ul>
+        </a>
+    {% endfor %}
+</div>
+<div class="cadastro">
     <button onclick="window.location.replace('http://127.0.0.1:5000/home')">Voltar</button>
+</div>
 </body>
 
 </html>

@@ -291,3 +291,38 @@ body {
     color: white;
     text-shadow: 1px 3px 10px #424242;
 }
+
+#mensagem {
+    background: transparent;
+    width: 1000px;
+    height: auto;
+    font-size: 30px;
+    margin-top: 200px;
+    padding-top: 200px;
+    font-family: 'Abel', sans-serif;
+    color: white;
+    margin-left: 30px;
+}
+
+.cadastro {
+    display: inline-block;
+    position: fixed;
+    width: 83px;
+    background: #f6f6f6;
+    padding: 3px;
+    font-size: 10px;
+    border-radius: 5px;
+    font-family: 'Calibri';
+    letter-spacing: 1px;
+    margin-left: -175px;
+    margin-top: 78px;
+    box-shadow: inset -2px -2px 6px -2px #696969;
+}
+
+.cadastro button {
+    width: 83px;
+    height: 20px;
+    font-size: 11px;
+    color: black;
+    box-shadow: inset -2px -2px 6px -2px #696969;
+}
