@@ -1,6 +1,6 @@
 #caixa {
     width: 300px;
-    height: 200px;
+    height: 300px;
     background: #ccc;
     position: fixed;
     margin-left: 600px;
@@ -9,7 +9,16 @@
     border: solid 2px #696969;
 }
 
-#frase {}
+#frase {
+    position: fixed;
+    font-size: 25px;
+    font-family: calibri;
+    width: auto;
+    height: 15px;
+    margin-left: 90px;
+    text-transform: uppercase;
+    color: #696969;
+}
 
 .nickname {
     display: inline-block;
@@ -17,19 +26,20 @@
     background: #f6f6f6;
     padding: 5px;
     font-size: 10px;
-    height: 20px;
+    height: auto;
     border-radius: 5px;
     font-family: 'Calibri';
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-left: 70px;
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 .nickname input {
     text-transform: uppercase;
     color: black;
     padding: 2px;
+    height: auto;
     margin-top: 3px;
     margin-left: -2px;
 }
@@ -41,8 +51,9 @@
     display: inline-block;
     width: 160px;
     background: #f6f6f6;
-    padding: 3.5px;
+    padding: 5px;
     font-size: 10px;
+    height: auto;
     border-radius: 5px;
     font-family: 'Calibri';
     letter-spacing: 1px;
@@ -54,14 +65,19 @@
 .password input {
     text-transform: uppercase;
     color: black;
+    padding: 2px;
+    height: auto;
+    margin-top: 3px;
+    margin-left: -2px;
 }
 
 .confirm {
     display: inline-block;
     width: 160px;
     background: #f6f6f6;
-    padding: 3.5px;
+    padding: 5px;
     font-size: 10px;
+    height: auto;
     border-radius: 5px;
     font-family: 'Calibri';
     letter-spacing: 1px;
@@ -73,6 +89,10 @@
 .confirm input {
     text-transform: uppercase;
     color: black;
+    padding: 2px;
+    height: auto;
+    margin-top: 3px;
+    margin-left: -2px;
 }
 
 
@@ -80,7 +100,8 @@
 
 .cadastro {
     display: inline-block;
-    width: 70px;
+    position: fixed;
+    width: 75px;
     background: #f6f6f6;
     padding: 3px;
     font-size: 10px;
@@ -88,14 +109,14 @@
     font-family: 'Calibri';
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-left: 120px;
-    margin-top: 10px;
+    margin-left: 70px;
+    margin-top: 20px;
     box-shadow: inset -2px -2px 6px -2px #696969;
 }
 
 .cadastro button {
     text-transform: uppercase;
-    width: 70px;
+    width: 75px;
     height: 20px;
     font-size: 11px;
     color: black;
@@ -112,8 +133,8 @@
     font-family: 'Calibri';
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-left: 120px;
-    margin-top: 10px;
+    margin-left: 160px;
+    margin-top: 20px;
     box-shadow: inset -2px -2px 6px -2px #696969;
 }
 
@@ -125,5 +146,3 @@
     color: black;
     box-shadow: inset -2px -2px 6px -2px #696969;
 }
-
-/

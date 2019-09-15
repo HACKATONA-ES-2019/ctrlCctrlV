@@ -5,37 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ url_for("static", filename="styles/register.css") }}">
+    <link rel="stylesheet" href="../static/styles/register.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <title>Cadastro</title>
 </head>
 
 <body>
 
-<div id="caixa">
-    <div class="nickname">
-        <input type="text" id="username" placeholder="Insira seu nome de usuário">
-    </div>
+    <div id="caixa">
+        <div id="frase">
+            Cadastre-se
+        </div>
+        <div class="nickname">
+            <li>Username</li>
+            <input type="text" id="username" placeholder="Insira seu nome de usuário">
+        </div>
 
-    <div class="passworld">
-        <input type="password" id="passw" placeholder="Insira sua senha">
-    </div>
+        <div class="password">
+            <li>Faça uma senha</li>
+            <input type="password" id="passw" placeholder="Insira sua senha">
+        </div>
 
-    <div class="confirm">
-        <input type="password" id="check_passw" placeholder="Confirme sua senha">
-    </div>
+        <div class="confirm">
+            <li>Repita a senha</li>
+            <input type="password" id="check_passw" placeholder="Confirme sua senha">
+        </div>
 
-    <div class="cadastro">
-        <button onclick="register()">Cadastro</button>
-    </div>
+        <div class="cadastro">
+            <button onclick="register()">Cadastro</button>
+        </div>
 
-    <div class="voltar">
-        <button onclick="back()">Voltar</button>
-    </div>
+        <div class="voltar">
+            <button onclick="back()">Voltar</button>
+        </div>
 
-</div>
+    </div>
 
 </body>
 
