@@ -16,7 +16,6 @@
     width: auto;
     height: 15px;
     margin-left: 90px;
-    text-transform: uppercase;
     color: #696969;
 }
 
@@ -102,14 +101,12 @@
     border-radius: 5px;
     font-family: 'Calibri';
     letter-spacing: 1px;
-    text-transform: uppercase;
     margin-left: -175px;
     margin-top: 78px;
     box-shadow: inset -2px -2px 6px -2px #696969;
 }
 
 .cadastro button {
-    text-transform: uppercase;
     width: 83px;
     height: 20px;
     font-size: 11px;
@@ -126,14 +123,12 @@
     border-radius: 5px;
     font-family: 'Calibri';
     letter-spacing: 1px;
-    text-transform: uppercase;
     margin-left: 160px;
     margin-top: 20px;
     box-shadow: inset -2px -2px 6px -2px #696969;
 }
 
 .voltar button {
-    text-transform: uppercase;
     width: 70px;
     height: 20px;
     font-size: 11px;
