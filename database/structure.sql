@@ -9,24 +9,15 @@ CREATE TABLE QUIZ(
 	quiz_title VARCHAR (250) PRIMARY KEY
 );
 
-CREATE TABLE USER_QUIZ(
-	username VARCHAR(50) NOT NULL,
-	quiz_title VARCHAR(250) NOT NULL,
-	PRIMARY KEY(username, quiz_title),
-	FOREIGN KEY (username) REFERENCES APP_USER(username),
-	FOREIGN KEY (quiz_title) REFERENCES QUIZ(quiz_title)
-);
-
 CREATE TABLE QUESTION(
     question_id VARCHAR (500) PRIMARY KEY,
-	correct_answer_id INTEGER(2) NOT NULL,
 	quiz_title VARCHAR(250) NOT NULL,
 	FOREIGN KEY (quiz_title) REFERENCES QUIZ(quiz_title)
 );
 
 CREATE TABLE ANSWER(
-	answer_id INTEGER(2) PRIMARY KEY,
-	answer_text VARCHAR(200) NOT NULL,
+	answer_text VARCHAR(200) PRIMARY KEY,
+	correct NUMBER NOT NULL,
 	question_id VARCHAR (500) NOT NULL,
 	FOREIGN KEY (question_id) REFERENCES QUESTION(question_id)
 );

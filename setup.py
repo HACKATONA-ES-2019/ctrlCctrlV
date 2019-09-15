@@ -6,10 +6,42 @@ from flask import Flask, render_template, request, jsonify
 app = Flask(__name__)
 handler = Handler()
 
-handler.add_user('admin', 'admin')
-handler.add_information('Incendio', 'resources/incendio', 'resources/incendio')
-handler.add_information('Deslizamento', 'resources/deslizamento', 'resources/deslizamento')
-handler.add_information('Enchente', 'resources/enchente', 'resources/enchente')
+# a = handler.get_quizzes()
+# aux = handler.get_quiz('Quiz incendio')
+
+# handler.add_user('admin', 'admin')
+# handler.add_information('Incendio', 'resources/incendio', 'resources/incendio')
+# handler.add_information('Deslizamento', 'resources/deslizamento', 'resources/deslizamento')
+# handler.add_information('Enchente', 'resources/enchente', 'resources/enchente')
+# handler.add_quiz('Quiz incendio')
+#
+# from model.answer import Answer
+#
+# answers1 = [
+#     Answer('Ficar no local e esperar socorro', 0),
+#     Answer('Tentar apagar o fogo por contra própria', 0),
+#     Answer('Ligar o chuveiro e ficar de baixo dele', 0),
+#     Answer('Procurar uma saída mantendo-se abaixado sob a fumaça com um lenço sobre as vias respiratórias', 1)
+# ]
+# handler.add_question('Quiz incendio', 'Em caso de incêndio em um local fechado e com fumaça, qual a melhor decisão para se tomar', answers1)
+#
+#
+# answers2 = [
+#     Answer('Acalmar a criança e sair pela porta que não está pegando fogo', 1),
+#     Answer('Chamar socorro se, e somente se, o fogo estiver fora de controle', 0),
+#     Answer('Tranquilizar a criança e deixá-la no banheiro', 0),
+#     Answer('Deixar a criança sozinha e procurar socorro', 0)
+# ]
+# handler.add_question('Quiz incendio', 'Se você está supervisionando uma criança e há princípio de fogo, você faz', answers2)
+#
+# answers3 = [
+#     Answer('Manter objetos inflamáveis próximo ao fogo', 0),
+#     Answer('Mato seco no quintal', 0),
+#     Answer('Manter os extintores de incêndios em locais estratégicos', 1),
+#     Answer('Todas as alternativas', 0)
+# ]
+#
+# handler.add_question('Quiz incendio', 'Para prevenir os incêndios, é necessário, no mínimo', answers3)
 
 
 @app.route('/', methods=['GET'])
@@ -44,6 +76,19 @@ def get_tutorial_html(tutorial_name):
 @app.route('/contato')
 def get_contato_html():
     return render_template('contato.html')
+
+
+@app.route('/quiz', methods=['GET'])
+def get_quizzes_html():
+    quizzes = handler.get_quizzes()
+    return render_template('quizzes.html', quizzes=quizzes)
+
+
+@app.route('/quiz/<quiz_title>', methods=['GET'])
+def get_quiz_html(quiz_title):
+    quiz_title = str(quiz_title).replace('_', ' ')
+    questions = handler.get_quiz(quiz_title)
+    return render_template('quiz.html', quiz_title=quiz_title, questions=questions[quiz_title])
 
 
 @app.route('/register', methods=['POST'])

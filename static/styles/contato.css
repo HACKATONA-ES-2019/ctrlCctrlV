@@ -291,3 +291,34 @@ body {
     color: white;
     text-shadow: 1px 3px 10px #424242;
 }
+
+.main_contact{
+    width: 50%;
+    margin: auto;
+    margin-top: 150px;
+    padding-top: 30px;
+}
+
+.contact_img{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 70px;
+    max-height: 70px;
+    min-width: 5px;
+    min-height: 5px;
+}
+
+.contact_styling {
+    text-align: justify;
+    white-space: pre-line;
+    font-size: 26px;
+    width: 600px;
+}
+
+.contact_styling th{
+    font-weight: normal;
+}
+
+
+.reference_address{
+    color: rgba(70, 70, 70, 0.815);
+}

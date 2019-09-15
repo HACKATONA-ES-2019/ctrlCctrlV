@@ -49,3 +49,23 @@ class DBHandler:
         with sqlite3.connect('database/local_db.db') as con:
             recovered = con.cursor().execute(query).fetchall()
             return recovered
+
+    def get_quiz(self, quiz_title):
+        questions_query = f'SELECT * FROM QUESTION WHERE quiz_title = "{quiz_title}";'
+        answer_query = f'SELECT * FROM ANSWER WHERE question_id = '
+
+        with sqlite3.connect('database/local_db.db') as con:
+            questions = con.cursor().execute(questions_query).fetchall()
+            answers = {}
+            for question, _ in questions:
+                curr_query = answer_query + f'"{question}";'
+                answers[question] = con.cursor().execute(curr_query).fetchall()
+
+            return questions, answers
+
+    def get_quizzes(self):
+        query = f'SELECT * FROM QUIZ INNER JOIN QUESTION ON QUIZ.quiz_title == QUESTION.quiz_title INNER JOIN ANSWER ON QUESTION.question_id == ANSWER.question_id'
+
+        with sqlite3.connect('database/local_db.db') as con:
+            recovered = con.cursor().execute(query).fetchall()
+            return recovered

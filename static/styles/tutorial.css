@@ -302,7 +302,6 @@ body {
 #downcute {
     width: 200px;
     height: auto;
-    float: center;
     border: solid 1px #A8B9CC;
     margin-left: 500px;
     margin-top: 280px;
@@ -324,7 +323,6 @@ body {
     padding: 5px;
     height: 20px;
     color: #ccc;
-    line-height: center;
     text-transform: none;
     font-style: normal;
     background-color: #4682B4;
