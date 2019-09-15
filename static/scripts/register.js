@@ -18,8 +18,9 @@ function register(){
         contentType: "application/json",
         context: document.body,
         success: function (res) {
-            if (res['status']){
+            if (res['result']){
                 window.location.replace('http://127.0.0.1:5000/home');
+                window.sessionStorage.setItem("username", username);
             }
         },
         data: JSON.stringify(data)

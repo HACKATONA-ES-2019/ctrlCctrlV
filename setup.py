@@ -6,6 +6,11 @@ from flask import Flask, render_template, request, jsonify
 app = Flask(__name__)
 handler = Handler()
 
+handler.add_user('admin', 'admin')
+handler.add_information('Incendio', 'resources/incendio', 'resources/incendio')
+handler.add_information('Deslizamento', 'resources/deslizamento', 'resources/deslizamento')
+handler.add_information('Enchente', 'resources/enchente', 'resources/enchente')
+
 
 @app.route('/', methods=['GET'])
 def get_login_html():
@@ -24,7 +29,21 @@ def get_home_html():
 
 @app.route('/tutoriais')
 def get_tutoriais_html():
-    return render_template('tutorial.html')
+    tutoriais = handler.get_informations()
+    return render_template('tutorial.html', tutoriais=tutoriais)
+
+
+@app.route('/tutorial/<tutorial_name>')
+def get_tutorial_html(tutorial_name):
+    tutorial_obj = handler.get_information(tutorial_name).json()
+    tutorial_name = tutorial_obj['title']
+    tutorial_text = tutorial_obj['text']
+    return render_template('general_page.html', tutorial_name=tutorial_name, tutorial_text=tutorial_text)
+
+
+@app.route('/contato')
+def get_contato_html():
+    return render_template('contato.html')
 
 
 @app.route('/register', methods=['POST'])
@@ -64,65 +83,6 @@ def login():
         password = data['password']
 
         if handler.get_user_by_username(username, password):
-            response['status'] = 200
-            response['result'] = True
-
-        else:
-            response['status'] = 409
-
-    except KeyError:
-        response['status'] = 400
-
-    except json.JSONDecodeError:
-        response['status'] = 406
-
-    return jsonify(response)
-
-
-@app.route('/logout', methods=['POST'])
-def logout():
-    response = {'status': 0, 'result': False, 'data': {}}
-
-    try:
-        data = request.get_json(force=True)
-
-        username = data['username']
-
-        if not handler.check_user(username):
-            response['status'] = 403
-            return jsonify(response)
-
-        if handler.remove_user(username):
-            response['status'] = 200
-            response['result'] = True
-
-        else:
-            response['status'] = 409
-
-    except KeyError:
-        response['status'] = 400
-
-    except json.JSONDecodeError:
-        response['status'] = 406
-
-    return jsonify(response)
-
-
-@app.route('/informations', methods=['GET'])
-def get_informations():
-    response = {'status': 0, 'result': False, 'data': {}}
-
-    try:
-        data = request.get_json(force=True)
-
-        username = data['username']
-        information_title = data['title']
-
-        if not handler.check_user(username):
-            response['status'] = 403
-            return jsonify(response)
-
-        if handler.get_information(information_title):
             response['status'] = 200
             response['result'] = True
 

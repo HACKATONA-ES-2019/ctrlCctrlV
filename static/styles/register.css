@@ -9,8 +9,6 @@
     border: solid 2px #696969;
 }
 
-#frase {}
-
 .nickname {
     display: inline-block;
     width: 160px;
@@ -21,13 +19,11 @@
     border-radius: 5px;
     font-family: 'Calibri';
     letter-spacing: 1px;
-    text-transform: uppercase;
     margin-left: 70px;
     margin-top: 30px;
 }
 
 .nickname input {
-    text-transform: uppercase;
     color: black;
     padding: 2px;
     margin-top: 3px;
@@ -46,13 +42,11 @@
     border-radius: 5px;
     font-family: 'Calibri';
     letter-spacing: 1px;
-    text-transform: uppercase;
     margin-left: 70px;
     margin-top: 10px;
 }
 
 .password input {
-    text-transform: uppercase;
     color: black;
 }
 
@@ -65,13 +59,11 @@
     border-radius: 5px;
     font-family: 'Calibri';
     letter-spacing: 1px;
-    text-transform: uppercase;
     margin-left: 70px;
     margin-top: 10px;
 }
 
 .confirm input {
-    text-transform: uppercase;
     color: black;
 }
 
@@ -87,14 +79,12 @@
     border-radius: 5px;
     font-family: 'Calibri';
     letter-spacing: 1px;
-    text-transform: uppercase;
     margin-left: 120px;
     margin-top: 10px;
     box-shadow: inset -2px -2px 6px -2px #696969;
 }
 
 .cadastro button {
-    text-transform: uppercase;
     width: 70px;
     height: 20px;
     font-size: 11px;
@@ -111,19 +101,15 @@
     border-radius: 5px;
     font-family: 'Calibri';
     letter-spacing: 1px;
-    text-transform: uppercase;
     margin-left: 120px;
     margin-top: 10px;
     box-shadow: inset -2px -2px 6px -2px #696969;
 }
 
 .voltar button {
-    text-transform: uppercase;
     width: 70px;
     height: 20px;
     font-size: 11px;
     color: black;
     box-shadow: inset -2px -2px 6px -2px #696969;
 }
-
-/
