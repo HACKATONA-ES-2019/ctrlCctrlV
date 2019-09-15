@@ -332,7 +332,7 @@ body {
 }
 
 #downcute a:hover {
-    color: #ccc;
+    color: black;
     background: #A8B9CC;
     -webkit-transition-duration: .80s;
     -moz-transition-duration: .80s;
@@ -355,16 +355,27 @@ body {
     -moz-transition-duration: .80s;
     -o-transition-duration: .80s;
     -ms-transition-duration: .80s;
-    ;
     text-indent: -38px;
     opacity: 0;
 }
 
 #downcute a:hover ul {
     margin-left: 200px;
+    color: black;
     -webkit-transition-duration: .80s;
     -moz-transition-duration: .80s;
     -o-transition-duration: .80s;
     -ms-transition-duration: .80s;
     opacity: 1;
+}
+
+#frase {
+    position: fixed;
+    font-size: 40px;
+    font-family: 'Pacifico', cursive;
+    width: auto;
+    height: 15px;
+    margin-left: 560px;
+    margin-top: 220px;
+    color: #4682B4;
 }
