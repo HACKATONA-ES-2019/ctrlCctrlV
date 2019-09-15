@@ -1,4 +1,5 @@
 import json
+import random
 from controllers.main_handler import Handler
 from flask import Flask, render_template, request, jsonify
 
@@ -7,11 +8,26 @@ handler = Handler()
 
 
 @app.route('/', methods=['GET'])
-def startup():
-    return render_template('startup.html')
+def get_login_html():
+    return render_template('login.html')
 
 
-@app.route('/cadastro', methods=['POST'])
+@app.route('/cadastro', methods=['GET'])
+def get_cadastro_html():
+    return render_template('register.html')
+
+
+@app.route('/home', methods=['GET'])
+def get_home_html():
+    return render_template('home.html')
+
+
+@app.route('/tutoriais')
+def get_tutoriais_html():
+    return render_template('tutorial.html')
+
+
+@app.route('/register', methods=['POST'])
 def register():
     response = {'status': 0, 'result': False, 'data': {}}
 
@@ -92,7 +108,7 @@ def logout():
     return jsonify(response)
 
 
-@app.route('/informacoes', methods=['GET'])
+@app.route('/informations', methods=['GET'])
 def get_informations():
     response = {'status': 0, 'result': False, 'data': {}}
 
@@ -123,4 +139,8 @@ def get_informations():
 
 
 if __name__ == '__main__':
+    app.config["CACHE_TYPE"] = "null"
+    app.config['SESSION_REFRESH_EACH_REQUEST'] = True
+    app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+    app.config['SECRET_KEY'] = float(random.randrange(100, 150000))/100
     app.run()

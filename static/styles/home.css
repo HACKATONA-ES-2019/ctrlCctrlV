@@ -303,7 +303,7 @@ a:hover {
     /* --- retire  - */
     width: 290px;
     float: left;
-    position: relative;
+    position: fixed;
     margin-left: 10px;
     margin-bottom: 20px;
     margin-top: 10px;
