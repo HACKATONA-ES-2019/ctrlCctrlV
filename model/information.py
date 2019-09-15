@@ -9,7 +9,7 @@ class Information:
     def json(self):
         return {
             'title': self.title,
-            'text': open(self.text_path, 'r').read(),
+            'text': open(self.text_path, 'r', encoding='utf-8').read(),
             'images': str(self.images_path)
         }
 
