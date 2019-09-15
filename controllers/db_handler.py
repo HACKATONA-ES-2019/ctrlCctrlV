@@ -42,3 +42,10 @@ class DBHandler:
                 return ()
 
             return recovered[0]
+
+    def get_informations(self):
+        query = f'SELECT * FROM INFORMATION'
+
+        with sqlite3.connect('database/local_db.db') as con:
+            recovered = con.cursor().execute(query).fetchall()
+            return recovered

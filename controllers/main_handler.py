@@ -51,3 +51,11 @@ class Handler:
             return self.information_manager.get_information(information_title)
 
         return None
+
+    def get_informations(self):
+        infos = self.db_handler.get_informations()
+        tutoriais_names = []
+        for info in infos:
+            tutoriais_names.append(info[0])
+
+        return tutoriais_names

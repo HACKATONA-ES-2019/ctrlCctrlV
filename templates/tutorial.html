@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/tutorial.css') }}">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -12,9 +13,38 @@
 </head>
 
 <body>
-{% for tutorial_name in questions %}
-    <button id="{{ tutorial_name }}">tutorial_name</button> {% endfor %}
 
+    <div class=abaNa>
+        <div id="menu-frente">
+            <img src="http://api.tumblr.com/v2/blog/URL.tumblr.com/avatar/96/">
+
+            <div class="menu-hover">
+                <div class="menu-nome"><a href="http://127.0.0.1:5000/tutoriais">Tutoriais</a></div>
+            </div>
+        </div>
+        <div id="menu-frente2">
+            <img src="http://api.tumblr.com/v2/blog/URL.tumblr.com/avatar/96/">
+
+            <div class="menu-hover2">
+                <div class="menu-nome2"><a>Quiz</a></div>
+            </div>
+        </div>
+        <div id="menu-frente3">
+            <img src="http://api.tumblr.com/v2/blog/URL.tumblr.com/avatar/96/">
+
+            <div class="menu-hover3">
+                <div class="menu-nome3"><a href="http://127.0.0.1:5000/contato">Contato</a></div>
+            </div>
+        </div>
+
+        <div id="home">
+            <a href="">HOME</a>
+        </div>
+    </div>
+{% for tutorial_name in tutoriais %}
+    <button id="{{ tutorial_name }}" onclick="window.location.replace('http://127.0.0.1:5000/tutorial/' + this.id);">{{ tutorial_name }}</button> {% endfor %}
+
+    <button onclick="window.location.replace('http://127.0.0.1:5000/home')">Voltar</button>
 </body>
 
 </html>
