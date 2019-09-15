@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles/quiz.css">
     <meta charset="UTF-8">
     <title>{{ quiz_title }}</title>
 </head>
+
 <body>
 
+    <div id="downcute">
+        <div id="pergunta">
+            <li>Campo da pergunta aqui, escreva a pergunta</li>
+        </div>
+        <a>
+            <center><button>Resposta 1</button></center>
+        </a>
+    </div>
 
-    
 
-{% for question in questions %}
-    {{ question }}
+    {% for question in questions %} {{ question }}
     <div>
-    {% for answer, correct in questions[question] %}
-        <button id="{{ answer }}" correct="{{ correct }}">{{ answer }}</button>
-
-    {% endfor %}
+        {% for answer, correct in questions[question] %}
+        <div>
+            <center><a id="{{ answer }}" correct="{{ correct }}">{{ answer }}</a></center>
+        </div>
+        {% endfor %}
 
     </div>
-{% endfor %}
+    {% endfor %}
 </body>
+
 </html>
