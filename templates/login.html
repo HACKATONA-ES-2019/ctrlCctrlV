@@ -2,15 +2,8 @@
 <html lang="en">
 
 <head>
-<<<<<<< HEAD
     <link rel="stylesheet" href="../static/styles/login.css">
     <script src="../static/scripts/login.js"></script>
-=======
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
-    <script src="{{ url_for('static', filename='scripts/login.js') }}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
->>>>>>> 0d8d297b797f42371389b1731275a7abc85409de
 
     <title>Login</title>
 </head>
@@ -18,6 +11,7 @@
 <body>
     <div id="caixa">
         <div class="login">
+            <li>Login</li>
             <div style="display:block; font-size:10px; margin-bottom:-5px"></div>
             <input type="text" id="username">
         </div>
@@ -31,7 +25,7 @@
         </div>
 
         <div class="cadastro">
-            <button onclick="window.location.href='{{ url_for('get_cadastro_html') }}';">Cadastro</button>
+            <button onclick="window.location.href='{{ url_for('register') }}';">Cadastro</button>
         </div>
 
     </div>
