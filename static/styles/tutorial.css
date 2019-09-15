@@ -47,7 +47,7 @@ body {
     height: 0px;
     background: rgba(0, 0, 0, .5);
     text-align: center;
-    font-family: calibri;
+    font-family: 'Calibri';
     text-shadow: -1px -1px rgba(0, 0, 0, .5);
     font-size: 15px;
     letter-spacing: .5px;
@@ -76,6 +76,7 @@ body {
     margin-left: 0px;
     width: 90px;
     text-align: center;
+    text-decoration: none;
     font-family: 'Calibri';
     border-radius: 100px 100px 100px 100px;
     text-shadow: -1px -1px rgba(0, 0, 0, .5);
@@ -131,7 +132,7 @@ body {
     height: 0px;
     background: rgba(0, 0, 0, .5);
     text-align: center;
-    font-family: calibri;
+    font-family: 'Calibri';
     text-shadow: -1px -1px rgba(0, 0, 0, .5);
     font-size: 15px;
     border-radius: 100px 100px 100px 100px;
@@ -165,6 +166,7 @@ body {
     text-shadow: -1px -1px rgba(0, 0, 0, .5);
     font-size: 15px;
     letter-spacing: .5px;
+    text-decoration: none;
     border-radius: 100px 100px 100px 100px;
     font-weight: bold;
     font-style: italic;
@@ -194,6 +196,7 @@ body {
     background: #A8B9CC;
     box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .3), 1px 1px 1px rgba(255, 255, 255, .3);
     overflow: hidden;
+    text-decoration: none;
     margin-top: 30px;
     margin-left: 250px;
 }
@@ -263,6 +266,7 @@ body {
     transition: 1s;
 }
 
+
 /* --- postagens  - */
 
 #main {
@@ -292,3 +296,75 @@ body {
     text-shadow: 1px 3px 10px #424242;
 }
 
+
+/* nao mexer no codigo acima */
+
+#downcute {
+    width: 200px;
+    height: auto;
+    float: center;
+    border: solid 1px #A8B9CC;
+    margin-left: 500px;
+    margin-top: 280px;
+    line-height: 90px;
+    position: fixed;
+    padding: 20px;
+}
+
+#downcute a {
+    opacity: 1;
+    -webkit-transition-duration: .80s;
+    -moz-transition-duration: .80s;
+    -o-transition-duration: .80s;
+    -ms-transition-duration: .80s;
+    float: left;
+    display: inline-block;
+    font: 20px PF Arma Five;
+    width: 200px;
+    padding: 5px;
+    height: 20px;
+    color: #ccc;
+    line-height: center;
+    text-transform: none;
+    font-style: normal;
+    background-color: #4682B4;
+    margin-left: -5px;
+}
+
+#downcute a:hover {
+    color: #ccc;
+    background: #A8B9CC;
+    -webkit-transition-duration: .80s;
+    -moz-transition-duration: .80s;
+    -o-transition-duration: .80s;
+    -ms-transition-duration: .80s;
+}
+
+#downcute a ul {
+    background-color: #A8B9CC;
+    color: black;
+    width: 300px;
+    height: 30px;
+    position: fixed;
+    margin-top: -28px;
+    font-family: PF Arma Five;
+    font-size: 15px;
+    overflow: hidden;
+    text-align: left;
+    -webkit-transition-duration: .80s;
+    -moz-transition-duration: .80s;
+    -o-transition-duration: .80s;
+    -ms-transition-duration: .80s;
+    ;
+    text-indent: -38px;
+    opacity: 0;
+}
+
+#downcute a:hover ul {
+    margin-left: 200px;
+    -webkit-transition-duration: .80s;
+    -moz-transition-duration: .80s;
+    -o-transition-duration: .80s;
+    -ms-transition-duration: .80s;
+    opacity: 1;
+}
