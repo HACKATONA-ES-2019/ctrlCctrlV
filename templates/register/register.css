@@ -1,0 +1,129 @@
+#caixa {
+    width: 300px;
+    height: 200px;
+    background: #ccc;
+    position: fixed;
+    margin-left: 600px;
+    top: 150px;
+    box-shadow: inset -2px -2px 6px -2px #696969;
+    border: solid 2px #696969;
+}
+
+#frase {}
+
+.nickname {
+    display: inline-block;
+    width: 160px;
+    background: #f6f6f6;
+    padding: 5px;
+    font-size: 10px;
+    height: 20px;
+    border-radius: 5px;
+    font-family: 'Calibri';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 70px;
+    margin-top: 30px;
+}
+
+.nickname input {
+    text-transform: uppercase;
+    color: black;
+    padding: 2px;
+    margin-top: 3px;
+    margin-left: -2px;
+}
+
+
+/*PASSOWORD*/
+
+.password {
+    display: inline-block;
+    width: 160px;
+    background: #f6f6f6;
+    padding: 3.5px;
+    font-size: 10px;
+    border-radius: 5px;
+    font-family: 'Calibri';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+.password input {
+    text-transform: uppercase;
+    color: black;
+}
+
+.confirm {
+    display: inline-block;
+    width: 160px;
+    background: #f6f6f6;
+    padding: 3.5px;
+    font-size: 10px;
+    border-radius: 5px;
+    font-family: 'Calibri';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+.confirm input {
+    text-transform: uppercase;
+    color: black;
+}
+
+
+/* CADASTRO */
+
+.cadastro {
+    display: inline-block;
+    width: 70px;
+    background: #f6f6f6;
+    padding: 3px;
+    font-size: 10px;
+    border-radius: 5px;
+    font-family: 'Calibri';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 120px;
+    margin-top: 10px;
+    box-shadow: inset -2px -2px 6px -2px #696969;
+}
+
+.cadastro button {
+    text-transform: uppercase;
+    width: 70px;
+    height: 20px;
+    font-size: 11px;
+    color: black;
+    box-shadow: inset -2px -2px 6px -2px #696969;
+}
+
+.voltar {
+    display: inline-block;
+    width: 70px;
+    background: #f6f6f6;
+    padding: 3px;
+    font-size: 10px;
+    border-radius: 5px;
+    font-family: 'Calibri';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 120px;
+    margin-top: 10px;
+    box-shadow: inset -2px -2px 6px -2px #696969;
+}
+
+.voltar button {
+    text-transform: uppercase;
+    width: 70px;
+    height: 20px;
+    font-size: 11px;
+    color: black;
+    box-shadow: inset -2px -2px 6px -2px #696969;
+}
+
+/
